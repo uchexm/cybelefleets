@@ -7340,7 +7340,10 @@
 
 
 
-
+#white-p{
+  color: rgba(var(--title-color), 1);
+  font-weight: 300;
+}
 
 
   

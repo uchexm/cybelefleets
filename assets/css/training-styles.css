@@ -7403,3 +7403,11 @@
     color: white;
     font-weight: 600;
 }
+
+
+#white-p{
+    color: rgba(var(--title-color), 1);
+    font-weight: 300;
+  }
+  
+  
