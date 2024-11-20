@@ -210,7 +210,7 @@
     </section>
     <!-- home section end -->
 <!--ANOTHER home section start -->
-<section class="home-section h-sect" id="home-section">
+<!-- <section class="home-section h-sect" id="home-section">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -239,56 +239,15 @@
                 </label>
             </div>
 
-            <div class="col-lg-6 image-preview" id="image-preview">
-                <img src="img/choicemaker/image_default.jpg" alt="Standard Option">
+            <div class="col-6 image-content" id="image-preview">
+                <img src="code/choicemaker/image_default.jpg" alt="Standard Option">
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!--ANOTHER home section end -->
 
-<script>
-    const cameraSelect = document.getElementById('camera-select');
-    const tyrePressureCheckbox = document.getElementById('tyre-pressure');
-    const fuelMonitoringCheckbox = document.getElementById('fuel-monitoring');
-    const imagePreview = document.getElementById('image-preview');
 
-    const images = {
-        '1_no_no': 'img/choicemaker/image_1_no_no.jpg',
-        '1_no_yes': 'img/choicemaker/image_1_no_yes.jpg',
-        '1_yes_no': 'img/choicemaker/image_1_yes_no.jpg',
-        '1_yes_yes': 'img/choicemaker/image_1_yes_yes.jpg',
-        '2_no_no': 'img/choicemaker/image_2_no_no.jpg',
-        '2_no_yes': 'img/choicemaker/image_2_no_yes.jpg',
-        '2_yes_no': 'img/choicemaker/image_2_yes_no.jpg',
-        '2_yes_yes': 'img/choicemaker/image_2_yes_yes.jpg',
-        '3_no_no': 'img/choicemaker/image_3_no_no.jpg',
-        '3_no_yes': 'img/choicemaker/image_3_no_yes.jpg',
-        '3_yes_no': 'img/choicemaker/image_3_yes_no.jpg',
-        '3_yes_yes': 'img/choicemaker/image_3_yes_yes.jpg',
-        'default': 'img/choicemaker/image_default.jpg', // Standard option image
-    };
-
-    function updateImage() {
-        const cameras = cameraSelect.value;
-        const tyrePressure = tyrePressureCheckbox.checked ? 'yes' : 'no';
-        const fuelMonitoring = fuelMonitoringCheckbox.checked ? 'yes' : 'no';
-
-        const imageKey = `${cameras}_${tyrePressure}_${fuelMonitoring}`;
-        const imagePath = images[imageKey] || images['default'];
-
-        imagePreview.innerHTML = `<img src="${imagePath}" alt="Configuration Image">`;
-    }
-
-    // Initialize the default image on page load
-    document.addEventListener('DOMContentLoaded', () => {
-        imagePreview.innerHTML = `<img src="${images['default']}" alt="Standard Option">`;
-    });
-
-    cameraSelect.addEventListener('change', updateImage);
-    tyrePressureCheckbox.addEventListener('change', updateImage);
-    fuelMonitoringCheckbox.addEventListener('change', updateImage);
-</script>
 <!--ANOTHER home section start -->
 <section class="home-section h-sect" id="home-section">
     <div class="container">
@@ -296,111 +255,82 @@
             <div class="col-12">
                 <h1 class="AI-h1">What Makes <span class="AI-span">Cybele </span>Smart Advanced Special</h1>
                 <p class="ai-p"> Cybele Smart Advanced is truly exceptional, offering limitless customization to meet your fleet’s exact needs. 
-                   <br> The
-                    demo below showcases just one potential solution—try it now and see how we can tailor it for you.</p>
+                   <br> The demo below showcases just one potential solution—try it now and see how we can tailor it for you.</p>
             </div>
         </div>
         <div class="row">
             
             <div class="col-6 text-content">
-                <div class="row icon-group">
-                    <div class="col-4 text-center">
-                        <i class="icon-group small-icon"> <img src="/assets/img/home/BlindspotIcons/4.png" alt="Icon 1"> </i>
-                      <p class="camera-facing">Detects Cyclists</p>
-                      <!-- <p class="camera-blue">Camera</p> -->
-                    </div>
-                    
-                    <div class="col-4 text-center">
-                        <!-- <i class="icon-group small-icon"> <img src="../assets/img/home/Road.gif" alt="Icon 2"> </i> -->
-                        <i class="icon-group small-icon"> <img src="/assets/img/home/BlindspotIcons/5.png" alt="Icon 1"> </i>
-                        <p class="camera-facing">Detects Motorcycles</p>
-                    </div>
+                <div class="col-lg-6 form-section">
+                    <label for="camera-select">How many cameras do you have?</label>
+                    <select id="camera-select" name="cameras">
+                        <option value="1">One Camera</option>
+                        <option value="2">Two Cameras</option>
+                        <option value="3">Three Cameras</option>
+                    </select>
+    
+                    <label>
+                        <input type="checkbox" id="tyre-pressure" name="tyre-pressure" value="yes">
+                        Do you need tyre pressure sensors?
+                    </label>
+    
+                    <label>
+                        <input type="checkbox" id="fuel-monitoring" name="fuel-monitoring" value="yes">
+                        Do you need fuel monitoring?
+                    </label>
                 </div>
-                <div class="row icon-group">
-                    <div class="col-4 text-center">
-                        <i class="icon-group small-icon"> <img src="/assets/img/home/BlindspotIcons/6.png" alt="Icon 1"> </i>
-                        <p class="camera-facing">Detects Cars</p>
-                    </div>
-                    
-                    <div class="col-4 text-center">
-                        <i class="icon-group small-icon"> <img src="/assets/img/home/BlindspotIcons/7.png" alt="Icon 1"> </i>
-                        <p class="camera-facing">Detects Pedestrians</p>
-                    </div>
-                </div>
-                <!-- <div class="title-section">
-                    <h1><span class="title-cybele">Cybele</span><div class="title-cybele">
-                         <img src="../assets/images/title-effect.png" alt=""><span>SIMPLIFY</span>
-                    </div> Smart Essential</h1>
-                </div> -->
-                <!-- <p>
-                    Cybele Smart Essential is a solution specifically<br>
-                    tailored to Heavy Commercial Vehicles (HCV’s) <br>
-                    offering comprehensive oversight with a road-facing<br>
-                    camera, AI driver monitoring, and an additional<br>
-                    internal camera, placed at the fleet owner's discretion<br>
-                    along with two blind spot cameras, and an MDVR for<br>
-                    enhanced safety and oversight.
-                </p>
-                <a class="btn btn-theme btn-solid" href="contact-us.html" id="blue-span-small" data-cursor="pointer"><span class="learn-span">Learn</span>&nbsp;More</a> -->
+             
                 
             </div>
             <div class="col-6 image-content">
-                <!-- <img src="../assets/img/home/HexagonShapeBig.svg" class="img-fluid bg-gif" alt=""> -->
-                <img src="assets/img/home/Blindspot-truck.gif" class="car-image" alt="">
-                <!-- <img src="../assets/img/home/Driver.gif" class="img-fluid bg-gif" alt=""> -->
-                <!-- <div id="icon-overlay1">
-                    <img src="../assets/img/home/Drivericon.gif" class="overlay-icon overlay-icon1" alt="Icon 1">
                
-                </div> -->
-                <!-- <div id="icon-overlay2">
-                    <img src="../assets/img/home/Passengericon.gif" class="overlay-icon overlay-icon3" alt="Icon 3">
-                </div> -->
-                <div class="icon-overlay">
-                    <!-- <img src="../assets/img/home/Roadicon.gif" class="overlay-icon overlay-icon3" alt="Icon 3"> -->
-                    <!-- <img src="../assets/img/home/NewLine.svg" class="overlay-line overlay-line1" alt="Line 1">
-                    <img src="../assets/img/home/NewLine.svg" class="overlay-line overlay-line2" alt="Line 2">
-                    <img src="../assets/img/home/NewLine.svg" class="overlay-line overlay-line3" alt="Line 3"> -->
-                </div>
+                <img src="code/choicemaker/image_default.jpg" class="car-image" alt="">
+               
+               
             </div>
         </div>
-        <!-- Icons Section -->
-         
-        <!-- <div class="row icon-group">
-            <div class="col-4 text-center">
-                <i class="icon-group small-icon"> <img src="../assets/img/home/Driver.gif" alt="Icon 1"> </i>
-              <p class="camera-facing">Driver <span class="camera-facing-span">Facing</span></p>
-              <p class="camera-blue">Camera</p>
-            </div>
-            
-            <div class="col-4 text-center">
-                <i class="icon-group small-icon"> <img src="../assets/img/home/Road.gif" alt="Icon 2"> </i>
-                <p class="camera-facing">Road <span class="camera-facing-span">Facing</span></p>
-              <p class="camera-blue">Camera</p>
-            </div>
-            <div class="col-4 text-center">
-                <i class="icon-group small-icon"> <img src="../assets/img/home/Passenger.gif" alt="Icon 3"> </i>
-                <p class="camera-facing">Additional <span class="camera-facing-span">Internal</span></p>
-                <p class="camera-blue">Camera</p>
-            </div>
-        </div>
-        <div class="row icon-group">
-            <div class="col-4 text-center">
-                <i class="icon-group small-icon"> <img src="/assets/img/home/below-truck/7.gif" alt="Icon 1"> </i>
-              <p class="camera-facing">Left <span class="camera-facing-span">Blindspot</span></p>
-              <p class="camera-blue">Camera</p>
-            </div>
-            
-            <div class="col-4 text-center">
-                <i class="icon-group small-icon"> <img src="/assets/img/home/below-truck/9.gif" alt="Icon 2"> </i>
-                <p class="camera-facing">Right <span class="camera-facing-span">Blindspot</span></p>
-              <p class="camera-blue">Camera</p>
-            </div>
-            <div class="col-4 text-center">
-                <i class="icon-group small-icon"> <img src="/assets/img/home/below-truck/8.gif" alt="Icon 3"> </i>
-                <p class="camera-facing">Mobile <span class="camera-facing-span">DVR</span></p>
-                <p class="camera-blue">Unit</p>
-            </div>
-        </div> -->
+        <script>
+            const cameraSelect = document.getElementById('camera-select');
+            const tyrePressureCheckbox = document.getElementById('tyre-pressure');
+            const fuelMonitoringCheckbox = document.getElementById('fuel-monitoring');
+            const imagePreview = document.getElementById('image-preview');
+        
+            const images = {
+                '1_no_no': 'code/choicemaker/image_1_no_no.jpg',
+                '1_no_yes': 'code/choicemaker/image_1_no_yes.jpg',
+                '1_yes_no': 'code/choicemaker/image_1_yes_no.jpg',
+                '1_yes_yes': 'code/choicemaker/image_1_yes_yes.jpg',
+                '2_no_no': 'code/choicemaker/image_2_no_no.jpg',
+                '2_no_yes': 'code/choicemaker/image_2_no_yes.jpg',
+                '2_yes_no': 'code/choicemaker/image_2_yes_no.jpg',
+                '2_yes_yes': 'code/choicemaker/image_2_yes_yes.jpg',
+                '3_no_no': 'code/choicemaker/image_3_no_no.jpg',
+                '3_no_yes': 'code/choicemaker/image_3_no_yes.jpg',
+                '3_yes_no': 'code/choicemaker/image_3_yes_no.jpg',
+                '3_yes_yes': 'code/choicemaker/image_3_yes_yes.jpg',
+                'default': 'code/choicemaker/image_default.jpg', // Standard option image
+            };
+        
+            function updateImage() {
+                const cameras = cameraSelect.value;
+                const tyrePressure = tyrePressureCheckbox.checked ? 'yes' : 'no';
+                const fuelMonitoring = fuelMonitoringCheckbox.checked ? 'yes' : 'no';
+        
+                const imageKey = `${cameras}_${tyrePressure}_${fuelMonitoring}`;
+                const imagePath = images[imageKey] || images['default'];
+        
+                imagePreview.innerHTML = `<img src="${imagePath}" alt="Configuration Image">`;
+            }
+        
+            // Initialize the default image on page load
+            document.addEventListener('DOMContentLoaded', () => {
+                imagePreview.innerHTML = `<img src="${images['default']}" alt="Standard Option">`;
+            });
+        
+            cameraSelect.addEventListener('change', updateImage);
+            tyrePressureCheckbox.addEventListener('change', updateImage);
+            fuelMonitoringCheckbox.addEventListener('change', updateImage);
+        </script>
     </div>
 </section>
 <!-- home section end -->
