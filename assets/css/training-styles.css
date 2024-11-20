@@ -5656,14 +5656,23 @@
   } */
   .about-section .about-img {
     display: flex;
-    align-items: flex-end; 
-    justify-content: flex-end;
-    background-image: url(../img/BehindPhoneAndBadge.svg);
+   
+    margin-top: 50px;
+    z-index: 1;
     background-repeat: no-repeat;
-    background-position: top;
+   
     position: relative;
 }
-
+.about-section .about-img1 {
+  display: flex;
+  justify-content: flex-end;
+ 
+  margin-top: 50px;
+  z-index: 1;
+  background-repeat: no-repeat;
+ 
+  position: relative;
+}
 .about-section .about-img img {
    
 }
@@ -5672,14 +5681,17 @@
       width: 58%;
     }
   }
-  .about-section .bg-effect {
+  .about-section .bg-effect1 {
     background: rgba(var(--black), 0.08);
     position: absolute;
     height: 80%;
     width: calc(100% - (27px + 237 * (100vw - 1430px) / 490));
     right: 0;
-    
-    /* top: 0; */
+    background-image: url(../img/BehindPhoneAndBadge.svg);
+    background-repeat: no-repeat;
+    background-position: top 20% right;
+    background-size: 28%;
+    /* transform: rotate(45deg); */
     z-index: 1;
         -webkit-box-shadow: 0 0 17px 3px rgb(248, 249, 250);
             box-shadow: 0 0 17px 3px rgb(241, 241, 242),
@@ -5689,6 +5701,48 @@
     right: unset;
     left: 0;
   }
+
+  .about-section .bg-effect {
+    background: rgba(var(--black), 0.08);
+    position: absolute;
+    height: 80%;
+    width: calc(100% - (27px + 237 * (100vw - 1430px) / 490));
+    right: 0;
+    background-image: url(../img/BehindPhoneAndBadge.svg);
+    background-repeat: no-repeat;
+  background-position: top 20% left;
+    background-size: 28%;
+    /* transform: rotate(45deg); */
+    z-index: 1;
+        -webkit-box-shadow: 0 0 17px 3px rgb(248, 249, 250);
+            box-shadow: 0 0 17px 3px rgb(241, 241, 242),
+            
+  }
+  [dir=rtl] .about-section .bg-effect {
+    right: unset;
+    left: 0;
+  }
+
+  /* .about-section .bg-effect {
+    background: rgba(var(--black), 0.08);
+    position: absolute;
+    height: 80%;
+    width: calc(100% - (27px + 237 * (100vw - 1430px) / 490));
+    right: 0;
+    background-image: url(../img/BehindPhoneAndBadge.svg);
+    background-repeat: no-repeat;
+   
+    
+    z-index: 1;
+        -webkit-box-shadow: 0 0 17px 3px rgb(248, 249, 250);
+            box-shadow: 0 0 17px 3px rgb(241, 241, 242),
+            
+  }
+  [dir=rtl] .about-section .bg-effect {
+    right: unset;
+    left: 0;
+  } */
+
   @media (max-width: 1429px) {
     .about-section .bg-effect {
       width: calc(100% - (52px + 15 * (100vw - 1400px) / 30));
@@ -7410,4 +7464,25 @@
     font-weight: 300;
   }
   
+  .login-link {
+    border: 1px solid rgba(var(--theme-color), 1);
+    padding: 5px 30px;
+    border-radius: 10px; 
+    color: rgba(var(--theme-color), 1);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .login-link:hover {
+    background: rgba(var(--theme-color), 0.21);
+    color: rgba(var(--white), 1);
+    border: 1px solid rgba(var(--title-color), 1);
+    -webkit-box-shadow: 0 0 17px 3px rgba(45, 140, 254, 1);
+            box-shadow: 0 0 17px 3px rgba(45, 140, 254, 1);
+  }
   
+  #blue-span-small{
+    color: rgba(var(--theme-color), 1)
+  }
+  #white-span-small{
+    color: rgba(var(--title-color), 1)
+  }

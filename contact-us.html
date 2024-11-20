@@ -81,6 +81,9 @@
                                     <li>
                                         <a class="dropdown-item" href="smart.html">Smart Lite</a>
                                     </li>
+                                    <li>
+                                        <a class="dropdown-item" href="essential.html">Smart Essential</a>
+                                    </li>
                                     <!-- <li>
                                         <a class="dropdown-item" href="login.html">Login</a>
                                     </li>
@@ -154,76 +157,72 @@
     <!-- breadcrumb section end -->
 
 
-    <!-- contact section start -->
-    <section class="contact-section pb-md-5 pb-0">
-        <div class="container">
-            <ul class="contact-box">
-                <li>
-                    <div class="contact-icon">
-                        <img src="../assets/svg/contact/message.svg" class="img-fluid" alt="message">
-                    </div>
-                    <h3>Mail id</h3>
-                    <h4>contact@cybelefleet.co.za</h4>
-                    
-                </li>
-                <li>
-                    <div class="contact-icon">
-                        <img src="../assets/svg/contact/contact.svg" class="img-fluid" alt="message">
-                    </div>
-                    <h3>Contact no.</h3>
-                    <h4>(076) 623 3516</h4>
-                    
-                </li>
-                <li>
-                    <div class="contact-icon">
-                        <img src="../assets/svg/contact/route.svg" class="img-fluid" alt="message">
-                    </div>
-                    <h3>Steenberg Office Park</h3>
-                    <h4>Silverwood Close, Westlake Tokai</h4>
-                    <h4>7945 Cape Town</h4>
-                </li>
-                
-            </ul>
-            <div class="contact-details">
-                <div class="row g-lg-5 g-4">
-                    <div class="col-xl-7 col-lg-6">
-                        <form class="auth-form">
-                            <div class="row g-4">
-                                <div class="col-sm-6">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="email" class="form-control" id="name">
-                                </div>
-                                <div class="col-sm-6">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email">
-                                </div>
-                                <div class="col-12">
-                                    <label for="phoneNumber" class="form-label">Phone number</label>
-                                    <input type="email" class="form-control" id="phoneNumber">
-                                </div>
-                                <div class="col-12">
-                                    <label for="message" class="form-label">Additional Message</label>
-                                    <textarea class="form-control" id="message" rows="3"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <a href="" data-cursor="pointer" class="btn-solid">Send message</a>
-                                </div>
+<!-- contact section start -->
+<section class="contact-section pb-md-5 pb-0">
+    <div class="container">
+        <ul class="contact-box">
+            <li>
+                <div class="contact-icon">
+                    <img src="../assets/svg/contact/message.svg" class="img-fluid" alt="message">
+                </div>
+                <h3>Mail id</h3>
+                <h4>contact@cybelefleet.co.za</h4>
+            </li>
+            <li>
+                <div class="contact-icon">
+                    <img src="../assets/svg/contact/contact.svg" class="img-fluid" alt="message">
+                </div>
+                <h3>Contact no.</h3>
+                <h4>(076) 623 3516</h4>
+            </li>
+            <li>
+                <div class="contact-icon">
+                    <img src="../assets/svg/contact/route.svg" class="img-fluid" alt="message">
+                </div>
+                <h3>Steenberg Office Park</h3>
+                <h4>Silverwood Close, Westlake Tokai</h4>
+                <h4>7945 Cape Town</h4>
+            </li>
+        </ul>
+        <div class="contact-details">
+            <div class="row g-lg-5 g-4">
+                <div class="col-xl-7 col-lg-6">
+                    <form class="auth-form" action="https://formspree.io/f/xldellpl" method="POST">
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
                             </div>
-                        </form>
-                    </div>
-                    <div class="col-xl-5 col-lg-6">
-                        <div class="map-sec">
-                            <iframe
-                            src='https://maps.google.com/maps?q=Block%20G%20The%20Terraces%201%20Silverwood%20Close%20Steenberg%20Office%20Park%20Tokai%20Cape%20Town%207945&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed'
-                        
-                          ></iframe>
+                            <div class="col-sm-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="phoneNumber" class="form-label">Phone number</label>
+                                <input type="text" class="form-control" id="phoneNumber" name="phone" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Additional Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" data-cursor="pointer" class="btn-solid">Send message</button>
+                            </div>
                         </div>
+                    </form>
+                </div>
+                <div class="col-xl-5 col-lg-6">
+                    <div class="map-sec">
+                        <iframe
+                            src='https://maps.google.com/maps?q=Block%20G%20The%20Terraces%201%20Silverwood%20Close%20Steenberg%20Office%20Park%20Tokai%20Cape%20Town%207945&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed'>
+                        </iframe>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- contact section end -->
+    </div>
+</section>
+<!-- contact section end -->
 
 
     <!-- contact us start -->

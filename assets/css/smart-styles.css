@@ -5054,7 +5054,7 @@
             padding-left: calc(var(--bs-gutter-x)* .5);
             margin-right: auto;
             margin-left: auto;
-            /* padding: 0 calc(15px + 85 * (100vw - 320px) / 1600); */
+            padding: 0 calc(15px + 85 * (100vw - 320px) / 1600);
             
         }
         
@@ -7345,5 +7345,25 @@
   font-weight: 300;
 }
 
+.login-link {
+  border: 1px solid rgba(var(--theme-color), 1);
+  padding: 5px 30px;
+  border-radius: 10px; 
+  color: rgba(var(--theme-color), 1);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.login-link:hover {
+  background: rgba(var(--theme-color), 0.21);
+  color: rgba(var(--white), 1);
+  border: 1px solid rgba(var(--title-color), 1);
+  -webkit-box-shadow: 0 0 17px 3px rgba(45, 140, 254, 1);
+          box-shadow: 0 0 17px 3px rgba(45, 140, 254, 1);
+}
 
-
+#blue-span-small{
+  color: rgba(var(--theme-color), 1)
+}
+#white-span-small{
+  color: rgba(var(--title-color), 1)
+}

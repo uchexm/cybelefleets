@@ -5050,11 +5050,12 @@
             --bs-gutter-x: 1.5rem;
             --bs-gutter-y: 0;
             width: 100%;
-            padding-right: calc(var(--bs-gutter-x)* .5);
-            padding-left: calc(var(--bs-gutter-x)* .5);
+            /* padding-right: calc(var(--bs-gutter-x)* .5);
+            padding-left: calc(var(--bs-gutter-x)* .5); */
             margin-right: auto;
             margin-left: auto;
-            /* padding: 0 calc(15px + 85 * (100vw - 320px) / 1600); */
+            
+            padding: 0 calc(15px + 85 * (100vw - 320px) / 1600);
             
         }
         
@@ -5100,7 +5101,7 @@
    
     display: flex;
     align-items: center;
-    padding: calc(100px + 90 * (100vw - 320px) / 1600) 0 calc(40px + 20 * (100vw - 320px) / 1600);
+    /* padding: calc(100px + 90 * (100vw - 320px) / 1600) 0 calc(40px + 20 * (100vw - 320px) / 1600); */
    
     width: 100%;
   }  
@@ -5116,7 +5117,7 @@
     .image-content {
         position: relative;
         text-align: center;
-        padding: 50px;
+        /* padding: 50px; */
         background-image: url(../img/home/HexagonShapeBig.svg), url(../img/home/HexagonShapeSmall.svg);
         background-size: 50%, 15%;
         background-repeat: no-repeat, no-repeat; 
@@ -5135,8 +5136,8 @@
 
         .car-image {
             position: relative;
-            width: 80%;
-            max-width: 500px;
+            width: 100%;
+            /* max-width: 500px; */
             z-index: 0;
             background: none;
         }
@@ -5375,7 +5376,7 @@
   }
 
     .text-content {
-        padding: 0 15px;
+        padding: 99px 0px 0px 0px;
         
         .title-section {
             margin-bottom: 1rem;
@@ -7345,5 +7346,84 @@
   font-weight: 300;
 }
 
+.AI-h1 {
+    color: rgba(var(--title-color), 1);
+    font-weight: 400;
+    text-align: center;
+}
+.AI-span{
+    color: rgba(var(--theme-color), 1);
+}
+.ai-p {
+    color: rgba(var(--title-color), 1);
+    font-weight: 400;
+    text-align: center;
+}
+
+.login-link {
+    border: 1px solid rgba(var(--theme-color), 1);
+    padding: 5px 30px;
+    border-radius: 10px; 
+    color: rgba(var(--theme-color), 1);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .login-link:hover {
+    background: rgba(var(--theme-color), 0.21);
+    color: rgba(var(--white), 1);
+    border: 1px solid rgba(var(--title-color), 1);
+    -webkit-box-shadow: 0 0 17px 3px rgba(45, 140, 254, 1);
+            box-shadow: 0 0 17px 3px rgba(45, 140, 254, 1);
+  }
+  
+
+  #white-span-small{
+    color: rgba(var(--title-color), 1)
+  }
 
 
+
+
+
+
+
+    /*CHANGES TO THE CYBELE FLEET STARTS HERE*/
+    .home-section {
+      background: black !important;
+     }
+     .precision-blue{
+       color: rgba(var(--theme-color), 1);
+       font-size: 23px;
+       font-weight: 800;
+       text-align: center;
+     }
+   
+     .home-section .feature-bg {
+       position: absolute;
+       bottom: 0;
+       opacity: 0.2;
+       width: 100%;
+       left: 0;
+   }
+   
+   .white-p{
+       color: white;
+       text-align: center;
+   }
+   #white-span{
+       color: white;
+      
+   }
+   #h3-blue{
+       color: rgba(var(--theme-color), 1);
+       font-size: 23px;
+       font-weight: 800;
+       
+   }
+   .big-h2{
+       font-weight: 800;
+   }
+   
+   #advanced-title{
+    text-align: center;
+   }

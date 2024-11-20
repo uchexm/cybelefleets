@@ -443,7 +443,7 @@
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 #span1{
-    background: rgba(var(--theme-color), 1);
+    /* background: rgba(var(--theme-color), 1); */
 }
 #span1b{
     background: rgba(var(--theme-color), 1);
