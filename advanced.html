@@ -116,7 +116,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="blog-details.html">Blogs</a>
+                                <a class="nav-link" href="blog-listing.html">Blogs</a>
                             </li>
 
                             <li class="nav-item">
@@ -258,6 +258,137 @@
                    <br> The demo below showcases just one potential solution—try it now and see how we can tailor it for you.</p>
             </div>
         </div>
+        <div id="advanced-select" class="row">
+            <div class="col-6 text-content">
+                <div class="col-lg-6 form-section">
+                    <label id="add-camera" for="camera-select">Add Additional Cameras</label>
+                    <select id="camera-select" name="cameras" class="styled-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+    
+                    <label class="yes-no-class">Tyre Monitor Sensors</label>
+                    <label class="tyre-monitoring">
+                        <input type="radio" id="tyre-pressure-yes" name="tyre-pressure" value="yes">
+                        Yes
+                    </label>
+                    <label class="tyre-monitoring">
+                        <input type="radio" id="tyre-pressure-no" name="tyre-pressure" value="no" checked>
+                        No
+                    </label>
+    
+                    <label class="yes-no-class">Fuel Camera & Sensors</label>
+                    <label class="fuel-monitoring">
+                        <input type="radio" id="fuel-monitoring-yes" name="fuel-monitoring" value="yes">
+                        Yes
+                    </label>
+                    <label class="fuel-monitoring">
+                        <input type="radio" id="fuel-monitoring-no" name="fuel-monitoring" value="no" checked>
+                        No
+                    </label>
+                </div>
+            </div>
+            <div class="col-6 image-content" id="image-preview">
+                <img src="code/choicemaker/image_default.jpg" class="car-image" alt="Standard Option">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+#advanced-select{
+    margin-top: 50px;
+}
+#add-camera{
+    color: white;
+}
+.styled-select {
+    display: block;
+    width: 200px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: 2px solid rgb(45, 140, 254);
+    margin-top: 5px; /* Add some space between the label and the select box */
+}
+
+.yes-no-class {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.tyre-monitoring, .fuel-monitoring {
+    margin-right: 30px;
+}
+
+input[type="radio"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    margin-right: 10px; /* Add some space between the radio button and the label */
+}
+</style>
+
+<script>
+    const cameraSelect = document.getElementById('camera-select');
+    const tyrePressureYes = document.getElementById('tyre-pressure-yes');
+    const tyrePressureNo = document.getElementById('tyre-pressure-no');
+    const fuelMonitoringYes = document.getElementById('fuel-monitoring-yes');
+    const fuelMonitoringNo = document.getElementById('fuel-monitoring-no');
+    const imagePreview = document.getElementById('image-preview');
+
+    const images = {
+        '1_no_no': 'code/choicemaker/image_1_no_no.jpg',
+        '1_no_yes': 'code/choicemaker/image_1_no_yes.jpg',
+        '1_yes_no': 'code/choicemaker/image_1_yes_no.jpg',
+        '1_yes_yes': 'code/choicemaker/image_1_yes_yes.jpg',
+        '2_no_no': 'code/choicemaker/image_2_no_no.jpg',
+        '2_no_yes': 'code/choicemaker/image_2_yes_no.jpg',
+        '2_yes_no': 'code/choicemaker/image_2_yes_yes.jpg',
+        '2_yes_yes': 'code/choicemaker/image_2_yes_yes.jpg',
+        '3_no_no': 'code/choicemaker/image_3_no_no.jpg',
+        '3_no_yes': 'code/choicemaker/image_3_no_yes.jpg',
+        '3_yes_no': 'code/choicemaker/image_3_yes_yes.jpg',
+        '3_yes_yes': 'code/choicemaker/image_3_yes_yes.jpg',
+        'default': 'code/choicemaker/image_default.jpg', // Standard option image
+    };
+
+    function updateImage() {
+        const cameras = cameraSelect.value;
+        const tyrePressure = tyrePressureYes.checked ? 'yes' : 'no';
+        const fuelMonitoring = fuelMonitoringYes.checked ? 'yes' : 'no';
+
+        const imageKey = `${cameras}_${tyrePressure}_${fuelMonitoring}`;
+        const imagePath = images[imageKey] || images['default'];
+
+        imagePreview.innerHTML = `<img src="${imagePath}" class="car-image" alt="Configuration Image">`;
+    }
+
+    // Initialize the default image on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        updateImage();
+    });
+
+    cameraSelect.addEventListener('change', updateImage);
+    tyrePressureYes.addEventListener('change', updateImage);
+    tyrePressureNo.addEventListener('change', updateImage);
+    fuelMonitoringYes.addEventListener('change', updateImage);
+    fuelMonitoringNo.addEventListener('change', updateImage);
+</script>
+<!-- <section class="home-section h-sect" id="home-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="AI-h1">What Makes <span class="AI-span">Cybele </span>Smart Advanced Special</h1>
+                <p class="ai-p"> Cybele Smart Advanced is truly exceptional, offering limitless customization to meet your fleet’s exact needs. 
+                   <br> The demo below showcases just one potential solution—try it now and see how we can tailor it for you.</p>
+            </div>
+        </div>
         <div class="row">
             
             <div class="col-6 text-content">
@@ -308,7 +439,7 @@
                 '3_no_yes': 'code/choicemaker/image_3_no_yes.jpg',
                 '3_yes_no': 'code/choicemaker/image_3_yes_no.jpg',
                 '3_yes_yes': 'code/choicemaker/image_3_yes_yes.jpg',
-                'default': 'code/choicemaker/image_default.jpg', // Standard option image
+                'default': 'code/choicemaker/image_default.jpg', 
             };
         
             function updateImage() {
@@ -322,7 +453,7 @@
                 imagePreview.innerHTML = `<img src="${imagePath}" alt="Configuration Image">`;
             }
         
-            // Initialize the default image on page load
+           
             document.addEventListener('DOMContentLoaded', () => {
                 imagePreview.innerHTML = `<img src="${images['default']}" alt="Standard Option">`;
             });
@@ -332,7 +463,7 @@
             fuelMonitoringCheckbox.addEventListener('change', updateImage);
         </script>
     </div>
-</section>
+</section> -->
 <!-- home section end -->
 
 
@@ -349,13 +480,13 @@
                                     <img src="../assets/svg/service/copy-bold.svg" class="img-fluid bold-icon" alt="">
                                 </div> -->
                                 <div class="service-content">
-                                    <h3><img src="../assets/img/home/WordHolderSmartLite.svg" alt="effect" class="img-fluid word-holder">AI-Driven MultiCamera System</h3>
-                                    <p>Experience enhanced visibility with
-                                        up to 8-channel HD recording,
-                                        including road-facing AI cameras
-                                        and blind spot monitoring, ensuring
-                                        precise tracking and real-time fleet
-                                        surveillance.</p>
+                                    <h3><img src="../assets/img/home/WordHolderSmartLite.svg" alt="effect" class="img-fluid word-holder">Bespoke for Every
+                                        Client</h3>
+                                    <p>Tailored to your fleet’s unique
+                                        needs, offering features like
+                                        additional cameras, fuel sensors,
+                                        and tire pressure monitors for
+                                        maximum operational flexibility.</p>
                                 </div>
                             </div>
                         </div>
@@ -367,13 +498,12 @@
                                 </div> -->
                                 <div class="service-content">
                                     <h3><img src="../assets/img/home/WordHolderSmartLite.svg" alt="effect"
-                                            class="img-fluid word-holder">Durable Performance</h3>
-                                    <p>Designed to handle tough conditions,
-                                        the system resists shocks and
-                                        vibrations, works in extreme
-                                        temperatures (-40℃ to +80℃), and
-                                        includes features like automatic
-                                        heating for cold starts.</p>
+                                            class="img-fluid word-holder">Advanced Safety
+                                            Systems</h3>
+                                    <p>Integrated ADAS, DSM, and BSD
+                                        ensure enhanced driver safety,
+                                        accident prevention, and improved
+                                        fleet management.</p>
                                 </div>
                             </div>
                         </div>
@@ -385,11 +515,12 @@
                                 </div> -->
                                 <div class="service-content">
                                     <h3><img src="../assets/img/home/WordHolderSmartLite.svg" alt="effect"
-                                        class="img-fluid word-holder">Blind Spot Detection</h3>
-                                    <p>AI-powered cameras actively
-                                        monitor blind spots, providing realtime alerts for potential collision
-                                        risks, empowering drivers to take
-                                        timely corrective action.
+                                        class="img-fluid word-holder">Expandable Solutions</h3>
+                                    <p>Supports multi-channel HD
+                                        recording, GPS, 4G, and advanced
+                                        sensor integrations, adapting to any
+                                        level of complexity your operation
+                                        requires.
                                     </p>
                                 </div>
                             </div>
@@ -402,8 +533,12 @@
                                 </div> -->
                                 <div class="service-content">
                                     <h3><img src="../assets/img/home/WordHolderSmartLite.svg" alt="effect"
-                                        class="img-fluid word-holder">Emergency Alarm</h3>
-                                    <p>Stay prepared with an emergency alarm button, providing immediate platform alerts to handle critical situations quickly.
+                                        class="img-fluid word-holder">Future-Proof Durability</h3>
+                                    <p>Engineered for extreme
+                                        environments, with anti-vibration
+                                        design, automatic heating for cold
+                                        starts, and reliable performance
+                                        under demanding conditions.
                                     </p>
                                 </div>
                             </div>
@@ -415,23 +550,25 @@
                         <div>
                             <div class="">
                                 <h2 id="our-solution-offers">Our Solution <br> Offers</h2>
-                                <h3 id="is-cybele">Is Cybele Smart Essential perfect for you?</h3>
+                                <h3 id="is-cybele">Is Cybele Smart Advanced perfect for you?</h3>
                             </div>
-                            <p>Cybele Smart Essential is a robust fleet management
-                                solution tailored for trucks and heavy-duty vehicles,
-                                featuring an AI-enabled MDVR, a High Definition
-                                recorder with up to 8 channels, GPS, and 4G for realtime vehicle surveillance. Designed for trucks, tankers,
-                                and buses, the solution includes Advanced DriverAssistance System (ADAS), Driver Status Monitor (DSM),
-                                and Blind Spot Detection (BSD) for comprehensive
-                                safety enhancements.</p>
+                            <p>Cybele Smart Advanced is our flagship telematics
+                                solution, providing everything included in Cybele Smart
+                                Essential and more. Designed for fleets with unique or
+                                complex requirements, it offers complete
+                                customization to meet any operational need—you
+                                name it, we make it work. Whether you require fuel
+                                sensors, tire pressure monitors, additional cameras, or
+                                advanced AI integrations, we tailor the system to fit
+                                your needs.</p>
                                 <p><br>
-                                    The system supports up to 4TB of HDD storage with an
-                                    optional SD card backup, along with advanced
-                                    features like anti-vibration design, automatic heating
-                                    for extreme cold, and a wide voltage power supply.
-                                    Cybele Smart Essential is built to deliver dependable
-                                    and efficient fleet management for the most
-                                    demanding operations.</p>
+                                    Featuring an AI-enabled MDVR, multichannel High Definition recording, GPS, 4G, and
+                                    comprehensive safety systems like Advanced Driver
+                                    Assistance System (ADAS), Driver Status Monitoring
+                                    (DSM) , and Blind Spot Detection (BSD), Cybele Smart
+                                    Advanced adapts seamlessly to your demands. Built
+                                    for reliability and flexibility, it delivers unmatched fleet
+                                    management for even the most specialized operations.</p>
                             <!-- <a data-cursor="pointer" class="btn-arrow" href="">
                                 <div class="icon-arrow"><i class="iconsax" data-icon="arrow-up"></i></div>View all
                             </a> -->
@@ -448,7 +585,7 @@
         <div class="container">
             <div class="title-basic">
                 <h1 id="white-span">See why users love</h1>
-                <h2 id="blue-span"> <span id="white-span">Cybele</span> Smart Essential</h2>
+                <h2 id="blue-span"> <span id="white-span">Cybele</span> Smart Advanced</h2>
             </div>
             <div class="swiper testimonialSlider">
                 <div class="swiper-wrapper">
@@ -459,7 +596,7 @@
                                     <img src="../assets/img/home/QuotationMarks.svg" class="img-fluid outline-img" alt="">
                                     
                                 </div>
-                                <p> Cybele Smart Essential’s blind spot
+                                <p> Cybele Smart Advanced’s blind spot
                                     detection and AI cameras
                                     dramatically improved our fleet’s
                                     safety and efficiency
@@ -480,7 +617,7 @@
                                 <div class="quote-img">
                                     <img src="../assets/img/home/QuotationMarks.svg" class="img-fluid outline-img" alt="">
                                 </div>
-                                <p>Cybele Smart Essential’s blind spot
+                                <p>Cybele Smart Advanced’s blind spot
                                     detection and AI cameras
                                     dramatically improved our fleet’s
                                     safety and efficiency
@@ -546,7 +683,7 @@
             <div class="container">
                 <div class="title-basic">
                     <h1 id="white-span">Popular Questions about</h1>
-                    <h2 id="blue-span"> <span id="white-span">Cybele</span> Smart Essential</h2>
+                    <h2 id="blue-span"> <span id="white-span">Cybele</span> Smart Advanced</h2>
                 </div>
                 <div class="accordion" id="accordionPanelsStayOpenExample">
                     <div class="accordion-item">
@@ -569,7 +706,7 @@
                             <button data-cursor="pointer" class="accordion-button collapsed" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                                 aria-controls="panelsStayOpen-collapseTwo">
-                                What types of vehicles are best suited for Cybele Smart Essential?
+                                What types of vehicles are best suited for Cybele Smart Advanced?
                             </button>
                         </h2>
                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
@@ -599,7 +736,7 @@
                             <button data-cursor="pointer" class="accordion-button collapsed" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
                                 aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                                Does Driver Training come included with Cybele Smart Essential?
+                                Does Driver Training come included with Cybele Smart Advanced?
                             </button>
                         </h2>
                         <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
@@ -615,7 +752,7 @@
                             <button data-cursor="pointer" class="accordion-button collapsed" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
                                 aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
-                                Does Cybele Smart Essential offer real-time tracking and monitoring
+                                Does Cybele Smart Advanced offer real-time tracking and monitoring
                             </button>
                         </h2>
                         <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"

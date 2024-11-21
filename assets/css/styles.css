@@ -3460,9 +3460,12 @@
   
   .blog-details .blog-img {
     border-radius: 6px;
+    
+    
   }
   .blog-details .blog-title-box {
     width: 46%;
+    max-width: 1400px;
     margin: -128px auto 0;
     text-align: center;
     padding: calc(14px + 20 * (100vw - 320px) / 1600);
@@ -7347,3 +7350,95 @@
 
 
 
+.login-link {
+  border: 1px solid rgba(var(--theme-color), 1);
+  padding: 5px 30px;
+  border-radius: 10px; 
+  color: rgba(var(--theme-color), 1);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.login-link:hover {
+  background: rgba(var(--theme-color), 0.21);
+  color: rgba(var(--white), 1);
+  border: 1px solid rgba(var(--title-color), 1);
+  -webkit-box-shadow: 0 0 17px 3px rgba(45, 140, 254, 1);
+          box-shadow: 0 0 17px 3px rgba(45, 140, 254, 1);
+}
+
+#white-span-small{
+  color: rgba(var(--title-color), 1)
+}
+#contactUs{
+  background: black;
+  padding: 15px calc(15px + 85*(100vw - 320px) / 1600);
+  padding-top: 100px
+}
+
+#contact-box{
+  padding-top: 40px;
+}
+
+.white-h1{
+  color: white;
+  text-align: center;
+}
+.big-blue-span{
+  color: rgba(var(--theme-color), 1);
+}
+.contact-us-p{
+  color: white;
+  font-size: 1rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+
+#blog-deets .blog-img {
+  border-radius: 6px;
+  
+  
+  
+}
+#blog-details .blog-title-box {
+  width: 46%;
+  max-width: 1400px;
+  margin: -128px auto 0;
+  text-align: center;
+  padding: calc(14px + 20 * (100vw - 320px) / 1600);
+  background: rgba(var(--title-color), 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 6px;
+}
+#blog-deets{
+  padding: 15px calc(15px + 85*(100vw - 320px) / 1600);
+  padding-top: 50px;
+  background: black;
+}
+.comment-section{
+  background: black;
+}
+/* .leave-comment{
+ border: 1px solid rgba(var(--theme-color), 1);
+} */
+.ratio2_1{
+  background: black;
+  padding: 15px calc(15px + 85*(100vw - 320px) / 1600);
+  padding-top: 150px;
+}
+.home-blog{
+  color: white;
+  font-size: 2rem;
+  padding-bottom: 30px;
+  
+}
+#blue-line{
+  border-bottom: 3px solid rgba(var(--theme-color), 1);
+  margin-right: 20px;
+  
+}
+#white-p {
+  color: rgba(var(--title-color), 1);
+  font-weight: 300;
+}
