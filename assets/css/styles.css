@@ -6485,6 +6485,8 @@
   
   .pricing-section {
     overflow: hidden;
+    background: black;
+    padding: 15px calc(15px + 85*(100vw - 320px) / 1600);
   }
   .pricing-section .pricing-box {
     position: relative;
@@ -6503,21 +6505,21 @@
             align-items: center;
     gap: 8px;
     padding: 24px 40px;
-    background: linear-gradient(0deg, rgb(10, 14, 23), rgb(10, 14, 23)), linear-gradient(179.9deg, rgb(10, 91, 117) -47.93%, rgb(2, 17, 26) 98.07%);
+    /* background: linear-gradient(0deg, rgb(10, 14, 23), rgb(10, 14, 23)), linear-gradient(179.9deg, rgb(10, 91, 117) -47.93%, rgb(2, 17, 26) 98.07%); */
     position: relative;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     margin: 0 auto;
-    z-index: 1;
+    z-index: 2;
     position: relative;
   }
   .pricing-section .pricing-box .pricing-top .pricing-bg {
     position: absolute;
     left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
+    top: 1;
+    /* height: 100%;
+    width: 100%; */
     z-index: -1;
   }
   .pricing-section .pricing-box .pricing-top h3 {
@@ -6606,14 +6608,14 @@
     margin-bottom: 0;
   }
   .pricing-section .pricing-box .pricing-content .pricing-link {
-    color: rgba(var(--white), 1);
-    font-size: calc(16px + 4 * (100vw - 320px) / 1600);
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 30px;
+    /* color: rgba(var(--white), 1); */
+    /* font-size: calc(16px + 4 * (100vw - 320px) / 1600); */
+    /* text-align: center;
+    text-transform: uppercase; */
+    /* padding-top: 30px; */
     display: block;
-    border-top: 1px dashed rgba(var(--white), 0.3);
-    margin-top: 20px;
+    /* border-top: 1px dashed rgba(var(--white), 0.3); */
+    /* margin-top: 20px; */
   }
   @media (max-width: 1199px) {
     .pricing-section .pricing-box .pricing-content .pricing-link {
@@ -7441,4 +7443,26 @@
 #white-p {
   color: rgba(var(--title-color), 1);
   font-weight: 300;
+}
+
+.price-h2{
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  
+}
+#blue-h2{
+  color: rgba(var(--theme-color), 1);
+}
+#cybele-solutions{
+  width: 30px;
+  height: auto;
+}
+.white-ul{
+  color: white;
+}
+
+.img-fld{
+  width: 50px;
 }
