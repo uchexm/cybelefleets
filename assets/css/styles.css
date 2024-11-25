@@ -7466,7 +7466,9 @@
 .img-fld{
   width: 50px;
 }
-
+.img-flud{
+  width: 80%;
+}
 .privacy-container{
   background: black;
 }
