@@ -538,8 +538,8 @@
   
   .btn-solid {
     font-size: calc(18px + 2 * (100vw - 320px) / 1600);
-    color: rgba(var(--dark-title), 1);
-    background-color: rgba(var(--theme-color), 1);
+    /* color: rgba(var(--dark-title), 1);
+    background-color: rgba(var(--theme-color), 1); */
     border: 1px solid rgba(var(--theme-color), 1);
     display: inline-block;
     padding: calc(8px + 4 * (100vw - 320px) / 1600) calc(20px + 8 * (100vw - 320px) / 1600);

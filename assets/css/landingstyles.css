@@ -64,7 +64,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-bottom: 0;
+   
   }
   @media (max-width: 991px) {
     .home-section .home-sec {
@@ -418,21 +418,26 @@
     padding-left: 10px ;
 }
 .safety-model-p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    padding: 10px; /* Adjust padding as needed */
-    background-color: #4a4a4a; /* Background color for the paragraph */
-    border-radius: 20px;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    margin: 20px auto; /* Add some space below the paragraph */
+  background: rgba(var(--title-color), 0.08);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  border-radius: 4px;
+  padding: 15px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: calc(14px + 8*(100vw - 320px) / 1600);
+ 
+  margin: 0 auto calc(30px + 10*(100vw - 320px) / 1600) !important;
 }
 
 .safety-model-p .span1,
 .safety-model-p span {
     color: white;
-    font-size: 1.5rem;
+  
     font-weight: 600;
     flex: 1;
     margin: 0 40px; /* Adjust margin as needed */
@@ -469,7 +474,9 @@
 }
 @media (max-width: 768px) {
     .safety-model-p {
-        flex-direction: column; /* Stack spans vertically on smaller screens */
+      overflow: auto;
+      width: 100%;
+        /* flex-direction: column;  */
     }
 
     .safety-model-p .span1,
@@ -500,3 +507,30 @@
   font-weight: 300;
 }
 
+.smart-h2{
+    color: white;
+    
+}
+.blue-smart-h2{
+    color: rgba(var(--theme-color), 1);
+}
+
+@media (max-width: 768px) {
+   #home-section-again{
+    padding: 0;
+    margin: -90px 0px 0px 0px;
+   }
+  
+   .left{
+    margin-bottom: 0px;
+   }
+  
+  .home-laptop .image-section {
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) {
+  .home-section .home-img .robot-img{
+    padding: 33px 0px 2px 30px;
+  }
+}

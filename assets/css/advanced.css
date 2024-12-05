@@ -5537,7 +5537,8 @@
   .home-section .home-content p {
     width: 70%;
     margin: 0 auto;
-    margin: 32px auto;
+   
+    /* margin: 32px auto; */
   }
   @media (max-width: 1199px) {
     .home-section .home-content p {
@@ -5581,7 +5582,7 @@
     stroke: rgba(var(--theme-color), 1);
   }
   .home-section .home-laptop {
-    margin-top: 48px;
+    /* margin-top: 48px; */
   }
   .home-section .home-laptop .laptop-sec {
     -webkit-perspective: 1130px;
@@ -7426,6 +7427,11 @@
    
    #advanced-title{
     text-align: center;
+    
    }
 
-
+@media (max-width: 991px) {
+ #advanced-title{
+  margin: 50px 0px 0px 0px;
+ }
+}
