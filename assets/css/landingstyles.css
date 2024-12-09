@@ -534,3 +534,6 @@
     padding: 33px 0px 2px 30px;
   }
 }
+.navbar-nav .nav-item a.active {
+  color: blue !important;
+}

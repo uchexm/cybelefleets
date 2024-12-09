@@ -7486,3 +7486,7 @@
   #white-span-small{
     color: rgba(var(--title-color), 1)
   }
+
+  .navbar-nav .nav-item a.active {
+    color: blue !important;
+}
