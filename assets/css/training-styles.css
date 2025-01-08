@@ -7488,5 +7488,14 @@
   }
 
   .navbar-nav .nav-item a.active {
-    color: blue !important;
+    color: rgba(var(--theme-color), 1)
+}
+header .navbar-light .navbar-text a.active {
+  color: rgba(var(--theme-color), 1);
+}
+header .navbar-light .navbar-nav .nav-link .active{
+  color: rgba(var(--theme-color), 1);
+}
+a.active{
+  color: rgba(var(--theme-color), 1);
 }

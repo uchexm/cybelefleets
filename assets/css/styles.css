@@ -6634,11 +6634,11 @@
     height: 44px;
     left: 50%;
     bottom: 25px;
-    background: rgba(var(--theme-color), 1);
+    /* background: rgba(var(--theme-color), 1);
     -webkit-box-shadow: 0px 5px 30px rgba(var(--theme-color), 0.4);
             box-shadow: 0px 5px 30px rgba(var(--theme-color), 0.4);
     -webkit-transform: translateX(-50%) rotate(45deg);
-            transform: translateX(-50%) rotate(45deg);
+            transform: translateX(-50%) rotate(45deg); */
     z-index: -1;
   }
   .pricing-section .pricing-row > div:nth-child(2) .pricing-box .pricing-mid {
@@ -6651,7 +6651,7 @@
     color: rgba(var(--theme-color), 1);
   }
   .pricing-section .pricing-row > div:nth-child(2) .pricing-box .pricing-content {
-    background: repeating-linear-gradient(45deg, rgba(var(--theme-color), 0.5) 0px, rgba(var(--theme-color), 0.5) 2px, transparent 2px, transparent 9px);
+    /* background: repeating-linear-gradient(45deg, rgba(var(--theme-color), 0.5) 0px, rgba(var(--theme-color), 0.5) 2px, transparent 2px, transparent 9px); */
   }
   .pricing-section .pricing-row > div:nth-child(2) .pricing-box .pricing-content .clip-path-content {
     margin-top: -2px;
@@ -7331,8 +7331,8 @@
 
 
 
-  .footer-links{
-    Color: white;
+.footer-links{
+    color: white;
     font-size: 1.5rem;
     font-weight: 300;
 }
@@ -7340,10 +7340,6 @@
     color: white;
     font-weight: 600;
 }
-
-
-
-
 
 #white-p{
   color: rgba(var(--title-color), 1);
@@ -7478,5 +7474,8 @@
 }
 
 .navbar-nav .nav-item a.active {
-  color: blue !important;
+  color: rgba(var(--theme-color), 1);
+}
+header .navbar-light .navbar-text a.active {
+  color: rgba(var(--theme-color), 1);
 }

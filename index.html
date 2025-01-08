@@ -296,7 +296,7 @@
                                     </li>
                                     <li>
                                         <img src="assets/img/home/HomePageArrow.png" class="img-fld" alt="arrow">
-                                        <h4>6 AI Driver Facing Camera</h4>
+                                        <h4>AI Driver Facing Camera</h4>
                                     </li>
                                     <!-- <li>
                                         <img src="assets/img/home/HomePageArrow.png" class="img-fld" alt="arrow">
@@ -3091,19 +3091,21 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const navItems = document.querySelectorAll(".navbar-nav .nav-item");
-            const homeNavItem = document.getElementById("nav-home");
-
+            const homeNavItem = document.querySelector(".navbar-nav .nav-item a[href='index.html']");
+    
             navItems.forEach(item => {
                 item.addEventListener("click", function () {
-                    navItems.forEach(nav => nav.classList.remove("active"));
-                    this.classList.add("active");
+                    navItems.forEach(nav => nav.querySelector("a").classList.remove("active"));
+                    this.querySelector("a").classList.add("active");
                 });
             });
-
-            // Remove blue color from home nav item when another item is clicked
+    
+            // Remove theme color from home nav item when another item is clicked
             navItems.forEach(item => {
                 item.addEventListener("click", function () {
-                    homeNavItem.classList.remove("active");
+                    if (this.querySelector("a").getAttribute("href") !== "index.html") {
+                        homeNavItem.classList.remove("active");
+                    }
                 });
             });
         });
