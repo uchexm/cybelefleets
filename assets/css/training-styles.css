@@ -5684,13 +5684,13 @@
   .about-section .bg-effect1 {
     background: rgba(var(--black), 0.08);
     position: absolute;
-    height: 80%;
+    height: 93%;
     width: calc(100% - (27px + 237 * (100vw - 1430px) / 490));
     right: 0;
     background-image: url(../img/BehindPhoneAndBadge.svg);
     background-repeat: no-repeat;
     background-position: top 20% right;
-    background-size: 28%;
+    background-size: 30%;
     /* transform: rotate(45deg); */
     z-index: 1;
         -webkit-box-shadow: 0 0 17px 3px rgb(248, 249, 250);
@@ -5705,13 +5705,13 @@
   .about-section .bg-effect {
     background: rgba(var(--black), 0.08);
     position: absolute;
-    height: 80%;
+    height: 92%;
     width: calc(100% - (27px + 237 * (100vw - 1430px) / 490));
     right: 0;
     background-image: url(../img/BehindPhoneAndBadge.svg);
     background-repeat: no-repeat;
   background-position: top 20% left;
-    background-size: 28%;
+    background-size: 30%;
     /* transform: rotate(45deg); */
     z-index: 1;
         -webkit-box-shadow: 0 0 17px 3px rgb(248, 249, 250);
