@@ -1,6 +1,6 @@
 
 
-Welcome to the cybelefleets project! This application is designed to help manage and track fleets of vehicles efficiently.
+Welcome to the Cybele Fleets project Website This application is designed to help manage and track fleets of vehicles efficiently.
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
@@ -12,7 +12,7 @@ Welcome to the cybelefleets project! This application is designed to help manage
 - [License](#license)
 
 ## Overview
-cybelefleets is a comprehensive fleet management system that allows users to monitor and manage their vehicle fleets in real-time. It provides tools for tracking vehicle locations, maintenance schedules, fuel consumption, and more.
+Cybele Fleets offers a comprehensive fleet management system that allows users to monitor and manage their vehicle fleets in real-time. It provides tools for tracking vehicle locations, maintenance schedules, fuel consumption, and more.
 
 ## Features
 - Real-time vehicle tracking
