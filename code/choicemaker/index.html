@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera and Monitoring Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .form-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .image-preview {
+      max-width: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .image-preview img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <label for="camera-select">How many cameras do you have?</label>
+      <select id="camera-select" name="cameras">
+        <option value="1">One Camera</option>
+        <option value="2">Two Cameras</option>
+        <option value="3">Three Cameras</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="tyre-pressure" name="tyre-pressure" value="yes">
+        Do you need tyre pressure sensors?
+      </label>
+
+      <label>
+        <input type="checkbox" id="fuel-monitoring" name="fuel-monitoring" value="yes">
+        Do you need fuel monitoring?
+      </label>
+    </div>
+
+    <div class="image-preview" id="image-preview">
+      <img src="image_default.jpg" alt="Standard Option">
+    </div>
+  </div>
+
+  <script>
+    const cameraSelect = document.getElementById('camera-select');
+    const tyrePressureCheckbox = document.getElementById('tyre-pressure');
+    const fuelMonitoringCheckbox = document.getElementById('fuel-monitoring');
+    const imagePreview = document.getElementById('image-preview');
+
+    const images = {
+      '1_no_no': 'image_1_no_no.jpg',
+      '1_no_yes': 'image_1_no_yes.jpg',
+      '1_yes_no': 'image_1_yes_no.jpg',
+      '1_yes_yes': 'image_1_yes_yes.jpg',
+      '2_no_no': 'image_2_no_no.jpg',
+      '2_no_yes': 'image_2_no_yes.jpg',
+      '2_yes_no': 'image_2_yes_no.jpg',
+      '2_yes_yes': 'image_2_yes_yes.jpg',
+      '3_no_no': 'image_3_no_no.jpg',
+      '3_no_yes': 'image_3_no_yes.jpg',
+      '3_yes_no': 'image_3_yes_no.jpg',
+      '3_yes_yes': 'image_3_yes_yes.jpg',
+      'default': 'image_default.jpg', // Standard option image
+    };
+
+    function updateImage() {
+      const cameras = cameraSelect.value;
+      const tyrePressure = tyrePressureCheckbox.checked ? 'yes' : 'no';
+      const fuelMonitoring = fuelMonitoringCheckbox.checked ? 'yes' : 'no';
+
+      const imageKey = `${cameras}_${tyrePressure}_${fuelMonitoring}`;
+      const imagePath = images[imageKey] || images['default'];
+
+      imagePreview.innerHTML = `<img src="${imagePath}" alt="Configuration Image">`;
+    }
+
+    // Initialize the default image on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      imagePreview.innerHTML = `<img src="${images['default']}" alt="Standard Option">`;
+    });
+
+    cameraSelect.addEventListener('change', updateImage);
+    tyrePressureCheckbox.addEventListener('change', updateImage);
+    fuelMonitoringCheckbox.addEventListener('change', updateImage);
+  </script>
+</body>
+</html>
+
